@@ -70,9 +70,9 @@ namespace SomerenUI
                 columnHeader3.Text = "lastname";
 
                 ColumnHeader columnHeader4 = new ColumnHeader();
-                columnHeader3.Text = "birthdate";
+                columnHeader4.Text = "birthdate";
 
-                listViewRooms.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+                listViewStudents.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
 
                 foreach (SomerenModel.Student s in studentList)
                 {
