@@ -50,7 +50,7 @@ namespace SomerenUI
                 // show students
                 pnl_Students.Show();
 
-                
+
 
                 // fill the students listview within the students panel with a list of students
                 SomerenLogic.Student_Service studService = new SomerenLogic.Student_Service();
@@ -58,11 +58,29 @@ namespace SomerenUI
 
                 // clear the listview before filling it again
                 listViewStudents.Clear();
+                listViewStudents.Items.Clear();
+
+                ColumnHeader columnHeader1 = new ColumnHeader();
+                columnHeader1.Text = "studentID";
+
+                ColumnHeader columnHeader2 = new ColumnHeader();
+                columnHeader2.Text = "name";
+
+                ColumnHeader columnHeader3 = new ColumnHeader();
+                columnHeader3.Text = "lastname";
+
+                ColumnHeader columnHeader4 = new ColumnHeader();
+                columnHeader3.Text = "birthdate";
+
+                listViewRooms.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
 
                 foreach (SomerenModel.Student s in studentList)
                 {
 
                     ListViewItem li = new ListViewItem(s.Name);
+                    li.SubItems.Add(s.Number.ToString());
+                    li.SubItems.Add(s.lastName);
+                    li.SubItems.Add(s.BirthDate.ToString());
                     listViewStudents.Items.Add(li);
                 }
             }

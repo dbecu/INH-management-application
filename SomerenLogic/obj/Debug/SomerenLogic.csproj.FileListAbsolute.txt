@@ -27,3 +27,14 @@ C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenLogi
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenLogic\obj\Debug\SomerenLogic.dll
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenLogic\obj\Debug\SomerenLogic.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\bin\Debug\SomerenLogic.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\bin\Debug\SomerenLogic.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\bin\Debug\SomerenDAL.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\bin\Debug\SomerenModel.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\bin\Debug\SomerenDAL.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\bin\Debug\SomerenDAL.dll.config
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\bin\Debug\SomerenModel.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\obj\Debug\SomerenLogic.csprojAssemblyReference.cache
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\obj\Debug\SomerenLogic.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\obj\Debug\SomerenLogic.pdb

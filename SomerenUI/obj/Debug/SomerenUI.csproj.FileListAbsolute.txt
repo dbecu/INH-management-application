@@ -30,3 +30,20 @@ C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenUI\o
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenUI\obj\Debug\SomerenUI.exe
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenUI\obj\Debug\SomerenUI.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\bin\Debug\SomerenUI.exe.config
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\bin\Debug\SomerenUI.exe
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\bin\Debug\SomerenUI.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\bin\Debug\SomerenDAL.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\bin\Debug\SomerenLogic.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\bin\Debug\SomerenModel.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\bin\Debug\SomerenDAL.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\bin\Debug\SomerenDAL.dll.config
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\bin\Debug\SomerenLogic.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\bin\Debug\SomerenModel.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\obj\Debug\SomerenUI.csprojAssemblyReference.cache
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\obj\Debug\SomerenUI.SomerenUI.resources
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\obj\Debug\SomerenUI.Properties.Resources.resources
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\obj\Debug\SomerenUI.csproj.GenerateResource.cache
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\obj\Debug\SomerenUI.exe
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenUI\obj\Debug\SomerenUI.pdb

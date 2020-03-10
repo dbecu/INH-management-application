@@ -13,3 +13,8 @@ C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenMode
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenModel\obj\Debug\SomerenModel.dll
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenModel\obj\Debug\SomerenModel.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenModel\bin\Debug\SomerenModel.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenModel\bin\Debug\SomerenModel.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenModel\obj\Debug\SomerenModel.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenModel\obj\Debug\SomerenModel.pdb

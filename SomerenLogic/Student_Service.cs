@@ -17,27 +17,32 @@ namespace SomerenLogic
         {
             try
             {
-                List<Student> student = student_db.Db_Get_All_Students();
-                return student;
+                List<Student> students = student_db.Db_Get_All_Students();
+                return students;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                string txt = e.Message;
                 // something went wrong connecting to the database, so we will add a fake student to the list to make sure the rest of the application continues working!
-                List<Student> student = new List<Student>();
-                Student a = new Student();
-                a.Name = "Mr. Test Student";
-                a.Number = 474791;
-                a.BirthDate = DateTime.Parse("1990-07-04");
-                student.Add(a);
-                Student b = new Student();
-                b.Name = "Mrs. Test Student";
-                b.Number = 197474;
-                b.BirthDate = DateTime.Parse("2019-03-04");
-                student.Add(b);
-                return student;
+                List<Student> students = new List<Student>();
+                DateTime dt1 = new DateTime(1991 - 06 - 17);
+                Student a = new Student(646052, "Mo", "Abou DAher", new DateTime(1991 - 06 - 17));
+                students.Add(a);
+
+                DateTime dt2 = new DateTime(1998 - 09 - 29);
+                Student b = new Student(648956, "Tamanna", "Abbas", new DateTime(1998 - 09 - 29));
+                students.Add(b);
+
+                DateTime dt3 = new DateTime(2000 - 07 - 11);
+                Student c = new Student(656552, "Dewi", "Becu", new DateTime(2000 - 07 - 11));
+                students.Add(c);
+
+
+                return students;
                 //throw new Exception("Someren couldn't connect to the database");
             }
 
         }
     }
 }
+
