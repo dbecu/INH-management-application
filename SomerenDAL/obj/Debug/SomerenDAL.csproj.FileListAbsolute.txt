@@ -22,3 +22,12 @@ C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenDAL\
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenDAL\obj\Debug\SomerenDAL.csproj.CopyComplete
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenDAL\obj\Debug\SomerenDAL.dll
 C:\Users\MEDION\Documents\Inholland\Term 3\DB Group\app\Someren1920F\SomerenDAL\obj\Debug\SomerenDAL.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenDAL\bin\Debug\SomerenDAL.dll.config
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenDAL\bin\Debug\SomerenDAL.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenDAL\bin\Debug\SomerenDAL.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenDAL\bin\Debug\SomerenModel.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenDAL\bin\Debug\SomerenModel.pdb
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenDAL\obj\Debug\SomerenDAL.csprojAssemblyReference.cache
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenDAL\obj\Debug\SomerenDAL.csproj.CopyComplete
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenDAL\obj\Debug\SomerenDAL.dll
+C:\Users\mabou\Documents\Someren\group5-someren\SomerenDAL\obj\Debug\SomerenDAL.pdb
