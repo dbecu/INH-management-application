@@ -37,7 +37,7 @@ namespace SomerenModel
             Type = false;
         }
 
-        //comment2
+        //comment3
 
     }
 }
