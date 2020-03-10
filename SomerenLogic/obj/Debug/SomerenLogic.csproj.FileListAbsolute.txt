@@ -38,3 +38,14 @@ C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\obj\Debug\SomerenLo
 C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
 C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\obj\Debug\SomerenLogic.dll
 C:\Users\mabou\Documents\Someren\group5-someren\SomerenLogic\obj\Debug\SomerenLogic.pdb
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenLogic\bin\Debug\SomerenLogic.dll
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenLogic\bin\Debug\SomerenLogic.pdb
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenLogic\bin\Debug\SomerenDAL.dll
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenLogic\bin\Debug\SomerenModel.dll
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenLogic\bin\Debug\SomerenDAL.pdb
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenLogic\bin\Debug\SomerenDAL.dll.config
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenLogic\bin\Debug\SomerenModel.pdb
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenLogic\obj\Debug\SomerenLogic.csprojAssemblyReference.cache
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenLogic\obj\Debug\SomerenLogic.dll
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenLogic\obj\Debug\SomerenLogic.pdb
