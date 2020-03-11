@@ -159,9 +159,9 @@
             // 
             this.pnl_Dashboard.Controls.Add(this.lbl_Dashboard);
             this.pnl_Dashboard.Controls.Add(this.img_Dashboard);
-            this.pnl_Dashboard.Location = new System.Drawing.Point(3, 52);
+            this.pnl_Dashboard.Location = new System.Drawing.Point(5, 50);
             this.pnl_Dashboard.Name = "pnl_Dashboard";
-            this.pnl_Dashboard.Size = new System.Drawing.Size(938, 414);
+            this.pnl_Dashboard.Size = new System.Drawing.Size(1000, 420);
             this.pnl_Dashboard.TabIndex = 2;
             // 
             // lbl_Dashboard
@@ -179,9 +179,9 @@
             this.pnl_Rooms.Controls.Add(this.listViewRooms);
             this.pnl_Rooms.Controls.Add(this.lbl_Rooms);
             this.pnl_Rooms.Controls.Add(this.pictureBox2);
-            this.pnl_Rooms.Location = new System.Drawing.Point(6, 27);
+            this.pnl_Rooms.Location = new System.Drawing.Point(5, 50);
             this.pnl_Rooms.Name = "pnl_Rooms";
-            this.pnl_Rooms.Size = new System.Drawing.Size(940, 461);
+            this.pnl_Rooms.Size = new System.Drawing.Size(1000, 420);
             this.pnl_Rooms.TabIndex = 8;
             // 
             // listViewRooms
@@ -191,9 +191,9 @@
             this.capacity,
             this.type});
             this.listViewRooms.HideSelection = false;
-            this.listViewRooms.Location = new System.Drawing.Point(15, 52);
+            this.listViewRooms.Location = new System.Drawing.Point(15, 40);
             this.listViewRooms.Name = "listViewRooms";
-            this.listViewRooms.Size = new System.Drawing.Size(766, 307);
+            this.listViewRooms.Size = new System.Drawing.Size(750, 300);
             this.listViewRooms.TabIndex = 7;
             this.listViewRooms.UseCompatibleStateImageBehavior = false;
             this.listViewRooms.View = System.Windows.Forms.View.Details;
@@ -228,9 +228,9 @@
             // 
             this.pictureBox2.Image = global::SomerenUI.Properties.Resources.someren;
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(805, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(805, 30);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(130, 123);
+            this.pictureBox2.Size = new System.Drawing.Size(130, 120);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -239,9 +239,9 @@
             this.pnl_Students.Controls.Add(this.listViewStudents);
             this.pnl_Students.Controls.Add(this.pictureBox1);
             this.pnl_Students.Controls.Add(this.lbl_Students);
-            this.pnl_Students.Location = new System.Drawing.Point(0, 42);
+            this.pnl_Students.Location = new System.Drawing.Point(5, 50);
             this.pnl_Students.Name = "pnl_Students";
-            this.pnl_Students.Size = new System.Drawing.Size(938, 427);
+            this.pnl_Students.Size = new System.Drawing.Size(1000, 420);
             this.pnl_Students.TabIndex = 4;
             // 
             // listViewStudents
@@ -252,9 +252,9 @@
             this.studentLastName,
             this.studentDOB});
             this.listViewStudents.HideSelection = false;
-            this.listViewStudents.Location = new System.Drawing.Point(16, 42);
+            this.listViewStudents.Location = new System.Drawing.Point(15, 40);
             this.listViewStudents.Name = "listViewStudents";
-            this.listViewStudents.Size = new System.Drawing.Size(766, 307);
+            this.listViewStudents.Size = new System.Drawing.Size(750, 300);
             this.listViewStudents.TabIndex = 5;
             this.listViewStudents.UseCompatibleStateImageBehavior = false;
             this.listViewStudents.View = System.Windows.Forms.View.Details;
@@ -283,9 +283,9 @@
             // 
             this.pictureBox1.Image = global::SomerenUI.Properties.Resources.someren;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(805, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(805, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(130, 120);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -304,9 +304,9 @@
             this.pnl_Lecturers.Controls.Add(this.ListViewLecturers);
             this.pnl_Lecturers.Controls.Add(this.lbl_Lecturers);
             this.pnl_Lecturers.Controls.Add(this.pictureBox3);
-            this.pnl_Lecturers.Location = new System.Drawing.Point(0, 44);
+            this.pnl_Lecturers.Location = new System.Drawing.Point(5, 50);
             this.pnl_Lecturers.Name = "pnl_Lecturers";
-            this.pnl_Lecturers.Size = new System.Drawing.Size(940, 404);
+            this.pnl_Lecturers.Size = new System.Drawing.Size(1000, 420);
             this.pnl_Lecturers.TabIndex = 9;
             // 
             // ListViewLecturers
@@ -315,9 +315,9 @@
             this.lecturerID,
             this.name});
             this.ListViewLecturers.HideSelection = false;
-            this.ListViewLecturers.Location = new System.Drawing.Point(15, 99);
+            this.ListViewLecturers.Location = new System.Drawing.Point(15, 40);
             this.ListViewLecturers.Name = "ListViewLecturers";
-            this.ListViewLecturers.Size = new System.Drawing.Size(741, 316);
+            this.ListViewLecturers.Size = new System.Drawing.Size(750, 300);
             this.ListViewLecturers.TabIndex = 7;
             this.ListViewLecturers.UseCompatibleStateImageBehavior = false;
             this.ListViewLecturers.View = System.Windows.Forms.View.Details;
@@ -336,9 +336,9 @@
             // 
             this.lbl_Lecturers.AutoSize = true;
             this.lbl_Lecturers.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Lecturers.Location = new System.Drawing.Point(10, 52);
+            this.lbl_Lecturers.Location = new System.Drawing.Point(10, 10);
             this.lbl_Lecturers.Name = "lbl_Lecturers";
-            this.lbl_Lecturers.Size = new System.Drawing.Size(113, 29);
+            this.lbl_Lecturers.Size = new System.Drawing.Size(107, 29);
             this.lbl_Lecturers.TabIndex = 6;
             this.lbl_Lecturers.Text = "Lecturers";
             // 
@@ -348,7 +348,7 @@
             this.pictureBox3.InitialImage = null;
             this.pictureBox3.Location = new System.Drawing.Point(805, 30);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(130, 123);
+            this.pictureBox3.Size = new System.Drawing.Size(130, 120);
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 

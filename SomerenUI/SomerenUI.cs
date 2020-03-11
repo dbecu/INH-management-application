@@ -46,6 +46,7 @@ namespace SomerenUI
                 // hide all other panels
                 pnl_Dashboard.Hide();
                 img_Dashboard.Hide();
+                pnl_Lecturers.Hide();
 
                 pnl_Rooms.Hide();
 
@@ -63,18 +64,24 @@ namespace SomerenUI
                 listViewStudents.Items.Clear();
 
                 ColumnHeader columnHeader1 = new ColumnHeader();
-                columnHeader1.Text = "studentID";
+                columnHeader1.Text = "Student ID";
 
                 ColumnHeader columnHeader2 = new ColumnHeader();
-                columnHeader2.Text = "name";
+                columnHeader2.Text = "First Name";
 
                 ColumnHeader columnHeader3 = new ColumnHeader();
-                columnHeader3.Text = "lastname";
+                columnHeader3.Text = "Last Name";
 
                 ColumnHeader columnHeader4 = new ColumnHeader();
-                columnHeader4.Text = "birthdate";
+                columnHeader4.Text = "Birthdate";
 
                 listViewStudents.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+
+                listViewStudents.Columns[0].Width = 100;
+                listViewStudents.Columns[1].Width = 100;
+                listViewStudents.Columns[2].Width = 100;
+                listViewStudents.Columns[3].Width = 100;
+
 
                 foreach (SomerenModel.Student s in studentList)
                 {
@@ -93,6 +100,7 @@ namespace SomerenUI
                 img_Dashboard.Hide();
 
                 pnl_Students.Hide();
+                pnl_Lecturers.Hide();
 
                 // show rooms
                 pnl_Rooms.Show();
@@ -118,6 +126,9 @@ namespace SomerenUI
 
                 listViewRooms.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
 
+                listViewRooms.Columns[0].Width = 70;
+                listViewRooms.Columns[1].Width = 70;
+                listViewRooms.Columns[2].Width = 70;
 
                 foreach (SomerenModel.Room r in roomList)
                 {
