@@ -3,6 +3,7 @@ using SomerenModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,11 +22,15 @@ namespace SomerenLogic
             try
             {
                 List<Room> rooms = room_db.Db_Get_All_Rooms();
+
+                //int[] test = new int[2];
+                //int num = test[5];
+
                 return rooms;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                string txt = e.Message;
+
                 // something went wrong connecting to the database, so we will add a fake student to the list to make sure the rest of the application continues working!
                 List<Room> rooms = new List<Room>();
                 Room a = new Room(474791);
@@ -38,10 +43,10 @@ namespace SomerenLogic
                 b.Type = false;
                 rooms.Add(b);
 
+                string errorText = "Cannot reach the Database for rooms";
+                File.AppendAllText(@"..\..\..\errorlog.txt", $"\n({DateTime.Now}) {errorText}");
+
                 return rooms;
-
-                throw e;
-
 
             }
 

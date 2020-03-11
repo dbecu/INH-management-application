@@ -15,6 +15,9 @@ namespace SomerenUI
 {
     public partial class SomerenUI : Form
     {
+
+        ErrorForm form;
+
         public SomerenUI()
         {
             InitializeComponent();
@@ -22,13 +25,15 @@ namespace SomerenUI
 
         private void SomerenUI_Load(object sender, EventArgs e)
         {
+            form = new ErrorForm();
+            form.Show();
             showPanel("Dashboard");
         }
 
         private void showPanel(string panelName)
         {
 
-            if(panelName == "Dashboard")
+            if (panelName == "Dashboard")
             {
 
                 // hide all other panels
@@ -188,6 +193,10 @@ namespace SomerenUI
                 }
 
             }
+
+
+            form.UpdateListBox();
+            form.Refresh();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -237,10 +246,7 @@ namespace SomerenUI
 
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-                showPanel("Lecturers");
-            
-
+            showPanel("Lecturers");
         }
     }
 }
