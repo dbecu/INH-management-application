@@ -13,8 +13,11 @@ namespace SomerenLogic
     {
         Room_DAO room_db = new Room_DAO();
 
+        //Will return a list of rooms from database. if an exception occurs, a hardcoded list is created
         public List<Room> GetRooms()
         {
+
+            //tries to get list of rooms from database unless an exception occurs
             try
             {
                 List<Room> rooms = room_db.Db_Get_All_Rooms();
@@ -35,10 +38,13 @@ namespace SomerenLogic
                 b.Type = false;
                 rooms.Add(b);
 
-
                 return rooms;
-                //throw new Exception("Someren couldn't connect to the database");
+
+                throw e;
+
+
             }
+
 
         }
     }
