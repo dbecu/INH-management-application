@@ -34,6 +34,8 @@ namespace SomerenUI
                 // hide all other panels
                 pnl_Students.Hide();
                 pnl_Rooms.Hide();
+                pnl_Lecturers.Hide();
+
 
                 // show dashboard
                 pnl_Dashboard.Show();
@@ -127,6 +129,54 @@ namespace SomerenUI
 
                 }
             }
+
+            else if (panelName == "Lecturers")
+            {
+
+                // hide all other panels
+                pnl_Dashboard.Hide();
+                img_Dashboard.Hide();
+
+                pnl_Students.Hide();
+
+                pnl_Rooms.Hide();
+
+                //show lecturers
+                pnl_Lecturers.Show();
+
+
+                // fill the teachers listview within the lecturers panel with a list of teachers
+                SomerenLogic.Teacher_Service tchrService = new SomerenLogic.Teacher_Service();
+                List<Teacher> teacherList = tchrService.GetTeachers();
+
+                // clear the listview before filling it again
+                ListViewLecturers.Clear();
+                ListViewLecturers.Items.Clear();
+
+                ColumnHeader teacherID = new ColumnHeader();
+                {
+                    teacherID.Text = "TeacherID";
+                }
+
+                ColumnHeader name = new ColumnHeader();
+                {
+                    name.Text = "Name";
+                }
+
+                ListViewLecturers.Columns.AddRange(new ColumnHeader[] { teacherID, name });
+                ListViewLecturers.Columns[0].Width = 70;
+                ListViewLecturers.Columns[1].Width = 130;
+
+
+                foreach (SomerenModel.Teacher teacher in teacherList)
+                {
+                    ListViewItem lvi = new ListViewItem(teacher.Number.ToString());
+                    lvi.SubItems.Add(teacher.FullName.ToString());
+                    ListViewLecturers.Items.Add(lvi);
+
+                }
+
+            }
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -171,6 +221,14 @@ namespace SomerenUI
 
         private void label1_Click_2(object sender, EventArgs e)
         {
+
+        }
+
+        private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+                showPanel("Lecturers");
+            
 
         }
     }
