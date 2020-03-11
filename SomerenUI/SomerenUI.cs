@@ -16,7 +16,7 @@ namespace SomerenUI
     public partial class SomerenUI : Form
     {
 
-        ErrorForm form;
+        ErrorForm errorForm;
 
         public SomerenUI()
         {
@@ -25,8 +25,10 @@ namespace SomerenUI
 
         private void SomerenUI_Load(object sender, EventArgs e)
         {
-            form = new ErrorForm();
-            form.Show();
+            //loads the ErrorForm
+            errorForm = new ErrorForm();
+            errorForm.Show();
+
             showPanel("Dashboard");
         }
 
@@ -112,7 +114,7 @@ namespace SomerenUI
 
 
 
-                // fill the students listview within the students panel with a list of students
+                // fill the room listview within the room panel with a list of room
                 SomerenLogic.Room_Service roomService = new SomerenLogic.Room_Service();
                 List<Room> roomList = roomService.GetRooms();
 
@@ -120,6 +122,7 @@ namespace SomerenUI
                 listViewRooms.Clear();
                 listViewRooms.Items.Clear();
 
+                //Makes the column headers for the listview
                 ColumnHeader columnHeader1 = new ColumnHeader();
                 columnHeader1.Text = "Room ID";
 
@@ -131,10 +134,12 @@ namespace SomerenUI
 
                 listViewRooms.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
 
+                //Makes the column headers have proper width to see the whole title
                 listViewRooms.Columns[0].Width = 70;
                 listViewRooms.Columns[1].Width = 70;
                 listViewRooms.Columns[2].Width = 70;
 
+                //Adds records of data to the listview
                 foreach (SomerenModel.Room r in roomList)
                 {
                     ListViewItem lvi = new ListViewItem(r.Number.ToString());
@@ -142,7 +147,6 @@ namespace SomerenUI
                     lvi.SubItems.Add(r.Capacity.ToString());
                     lvi.SubItems.Add(r.StringType);
                     listViewRooms.Items.Add(lvi);
-
                 }
             }
 
@@ -194,9 +198,26 @@ namespace SomerenUI
 
             }
 
+            //What controls the error form
+            errorForm.UpdateListBox();
+            FormCollection fc = Application.OpenForms;
+            bool isOpen = false;
+            foreach (Form frm in fc)
+            {
+                //iterate through
+                if (frm.Name == errorForm.Name)
+                    isOpen = true;
+                else
+                    isOpen = false;
+            }
 
-            form.UpdateListBox();
-            form.Refresh();
+            if (isOpen)
+                errorForm.Refresh();
+            else
+            {
+                errorForm = new ErrorForm();
+                errorForm.Show();
+            }
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)

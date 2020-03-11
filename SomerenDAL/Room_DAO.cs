@@ -1,31 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Data;
-using System.Collections.ObjectModel;
-using SomerenModel;
 using System.Configuration;
+using SomerenModel;
 
 namespace SomerenDAL
 {
     public class Room_DAO : Base
     {
-
-        //test beta
-
         private SqlConnection dbConnection;
 
+        //Connects the database for this class, for the classes related to room
         public Room_DAO()
         {
             string connString = ConfigurationManager
-                .ConnectionStrings["pdb1920it10"]       //database name
+                .ConnectionStrings["pdb1920it10"]       //pdb1920it10 = database name
                 .ConnectionString;
             dbConnection = new SqlConnection(connString);
         }
 
+        //returns the list of rooms from the database, for the table rooms
         public List<Room> Db_Get_All_Rooms()
         {
             dbConnection.Open();
@@ -45,6 +39,7 @@ namespace SomerenDAL
             return rooms;
         }
 
+        //translates a record of the table 'room' from the database into an object Room
         private Room ReadRoom(SqlDataReader reader)
         {
             int roomID = (int)reader["roomID"];
@@ -53,7 +48,5 @@ namespace SomerenDAL
 
             return new Room(roomID, capacity, boolType);
         }
-
-
     }
 }
