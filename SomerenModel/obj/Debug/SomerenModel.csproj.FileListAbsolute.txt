@@ -18,3 +18,8 @@ C:\Users\mabou\Documents\Someren\group5-someren\SomerenModel\bin\Debug\SomerenMo
 C:\Users\mabou\Documents\Someren\group5-someren\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
 C:\Users\mabou\Documents\Someren\group5-someren\SomerenModel\obj\Debug\SomerenModel.dll
 C:\Users\mabou\Documents\Someren\group5-someren\SomerenModel\obj\Debug\SomerenModel.pdb
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenModel\bin\Debug\SomerenModel.dll
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenModel\bin\Debug\SomerenModel.pdb
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenModel\obj\Debug\SomerenModel.dll
+C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenModel\obj\Debug\SomerenModel.pdb
