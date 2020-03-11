@@ -14,6 +14,8 @@ namespace SomerenDAL
     public class Room_DAO : Base
     {
 
+        //test beta
+
         private SqlConnection dbConnection;
 
         public Room_DAO()
@@ -53,19 +55,5 @@ namespace SomerenDAL
         }
 
 
-        //private List<Room> ReadTables(DataTable dataTable)
-        //{
-        //    List<Room> rooms = new List<Room>();
-
-        //    foreach (DataRow dr in dataTable.Rows)
-        //    {
-        //        Room room = new Room()
-        //        {
-        //            Number = (int)dr["roomID"]
-        //        };
-        //        rooms.Add(room);
-        //    }
-        //    return rooms;
-        //}
     }
 }
