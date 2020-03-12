@@ -8,10 +8,11 @@ namespace SomerenModel
 {
     public class Teacher
     {
+        //Properties
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Number { get; set; } // LecturerNumber, e.g. 47198
-
+        public bool Supervisor { get; set; } 
         public string FullName  // full name 
         {
             get
@@ -21,20 +22,23 @@ namespace SomerenModel
 
         }
 
-        public Teacher()
+        //returns yes if its a supervisor else returns no
+        public string StringSupervisor
         {
-
+            get
+            {
+                if (Supervisor)
+                    return "Yes";
+                else
+                    return "No";
+            }
         }
 
-        public Teacher(string firstName, string lastName)
+        //constructor of Teacher
+        public Teacher(int number, string firstName, string lastName) 
         {
             FirstName = firstName;
             LastName = lastName;
-        }
-
-        public Teacher(int number, string firstName, string lastName)
-            : this(firstName, lastName)
-        {
             Number = number;
         }
 

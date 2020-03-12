@@ -64,4 +64,3 @@ C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenUI\obj\Debug\SomerenUI
 C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete
 C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenUI\obj\Debug\SomerenUI.exe
 C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenUI\obj\Debug\SomerenUI.pdb
-C:\Users\MEDION\Documents\repo_test\group5-someren\SomerenUI\obj\Debug\SomerenUI.ErrorForm.resources

@@ -12,34 +12,49 @@ namespace SomerenDAL
 {
     public class Teacher_DAO : Base
     {
-        private SqlConnection dbConnection;
-
-        public Teacher_DAO()
+        //gets all the teachers from database and returns a list of teachers
+        public List<Teacher> Db_Get_All_Teachers()  
         {
-            string connString = ConfigurationManager
-                .ConnectionStrings["pdb1920it10"]       //database name
-                .ConnectionString;
-            dbConnection = new SqlConnection(connString);
-        }
-        public List<Teacher> Db_Get_All_Teachers()  //gets all the teachers from database
-        {
-            dbConnection.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM teachers", dbConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT teacherID, name,lastname FROM teachers", conn);
             SqlDataReader reader = cmd.ExecuteReader();
-            List<Teacher> teachers = new List<Teacher>();
+            List<Teacher> teachers = new List<Teacher>(); //list of teachers
 
-            while (reader.Read())
+            //reads a teacher object and stores it in the list of teachers
+            while (reader.Read())  
             {
                 Teacher teacher = ReadTeacher(reader);
                 teachers.Add(teacher);
             }
-
             reader.Close();
-            dbConnection.Close();
+
+            SqlCommand cmd2 = new SqlCommand("SELECT teacherID FROM supervisors", conn);
+            SqlDataReader reader2 = cmd2.ExecuteReader();
+            List<int> supervisors = new List<int>(); //list of supervisors
+
+            //reads teacherID from supervisor table of database and stores it into a list
+            while (reader2.Read())
+            {
+                int teacherID = (int)reader2["teacherID"];
+                supervisors.Add(teacherID);
+            }
+
+            reader2.Close();
+
+            //checks if the supervisor contains that teacherId, if yes, then sets the supervisor property of teacher true
+            foreach (Teacher teacher in teachers)
+            {
+                if (supervisors.Contains(teacher.Number))
+                    teacher.Supervisor = true;
+                
+            }
+
+            conn.Close();
 
             return teachers;
         }
 
+        //reads a teacher from the database and converts it into a teacher object
         private Teacher ReadTeacher(SqlDataReader reader)
         {
             int teacherID = (int)reader["teacherID"];

@@ -14,23 +14,15 @@ namespace SomerenDAL
     public class Student_DAO : Base
     {
 
-        private SqlConnection dbConnection;
-
-        public Student_DAO()
-        {
-            string connString = ConfigurationManager
-                .ConnectionStrings["pdb1920it10"]       //database name
-                .ConnectionString;
-            dbConnection = new SqlConnection(connString);
-        }
-
+        //returns the list of students from the database, table student
         public List<Student> Db_Get_All_Students()
         {
-            dbConnection.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM students", dbConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT studentID, name, lastname, birthdate FROM students", conn);
             SqlDataReader reader = cmd.ExecuteReader();
             List<Student> students = new List<Student>();
 
+            //reads through all the records from the table 'students'
             while (reader.Read())
             {
                 Student student = ReadStudent(reader);
@@ -38,11 +30,12 @@ namespace SomerenDAL
             }
 
             reader.Close();
-            dbConnection.Close();
+            conn.Close();
 
             return students;
         }
 
+        //from table "student" in database into object Student
         private Student ReadStudent(SqlDataReader reader)
         {
             int studentID = (int)reader["studentID"];
@@ -52,21 +45,5 @@ namespace SomerenDAL
 
             return new Student(studentID, firstName, lastName, birthDate);
         }
-
-
-        //private List<Room> ReadTables(DataTable dataTable)
-        //{
-        //    List<Room> rooms = new List<Room>();
-
-        //    foreach (DataRow dr in dataTable.Rows)
-        //    {
-        //        Room room = new Room()
-        //        {
-        //            Number = (int)dr["roomID"]
-        //        };
-        //        rooms.Add(room);
-        //    }
-        //    return rooms;
-        //}
     }
 }

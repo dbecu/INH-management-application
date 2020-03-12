@@ -8,14 +8,15 @@ namespace SomerenDAL
     public abstract class Base
     {
         private SqlDataAdapter adapter;
-        private SqlConnection conn;
-        public Base()       //DO THIS
+        protected SqlConnection conn;
+
+        // Room_DAO, Student_DAO, Teacher_DAO uses this
+        public Base()       
         {
-            // DO NOT FORGET TO INSERT YOUR CONNECTION STRING NAMED 'SOMEREN DATABASE' IN YOUR APP.CONFIG!!
-            /*
-                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SomerenDatabase"].ConnectionString);
-                adapter = new SqlDataAdapter();
-             */
+            string connString = ConfigurationManager
+                .ConnectionStrings["pdb1920it10"]       //pdb1920it10 = database name
+                .ConnectionString;
+            conn = new SqlConnection(connString);
         }
 
         protected SqlConnection OpenConnection()
@@ -72,8 +73,6 @@ namespace SomerenDAL
                 CloseConnection();
             }
         }
-
-
 
         /* For Select Queries */
         protected DataTable ExecuteSelectQuery(String query, params SqlParameter[] sqlParameters)

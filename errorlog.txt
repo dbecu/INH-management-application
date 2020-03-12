@@ -3,3 +3,20 @@
 (3/11/2020 3:57:49 PM) Cannot reach the Database for rooms
 (3/11/2020 4:01:13 PM) Cannot reach the Database for rooms
 (3/11/2020 4:01:20 PM) Cannot reach the Database for rooms
+(3/12/2020 10:04:51 AM) Cannot reach the Database for rooms
+(3/12/2020 10:04:56 AM) Cannot reach the Database for rooms
+(3/12/2020 10:04:57 AM) Cannot reach the Database for rooms
+(3/12/2020 10:05:38 AM) Cannot reach the Database for rooms
+(3/12/2020 10:29:05 AM) Cannot reach the Database for rooms
+(3/12/2020 11:26:49 AM) (3/12/2020 11:26:49 AM) Room - Something went wrong when connecting to the database!
+(3/12/2020 11:27:15 AM) (3/12/2020 11:27:15 AM) Room - Something went wrong when connecting to the database!
+(3/12/2020 11:27:20 AM) (3/12/2020 11:27:20 AM) Room - Something went wrong when connecting to the database!
+(3/12/2020 11:29:59 AM) (3/12/2020 11:29:59 AM) Room - Something went wrong when connecting to the database!
+(3/12/2020 11:31:56 AM) (3/12/2020 11:31:56 AM) Room - Something went wrong when connecting to the database.
+(3/12/2020 11:33:10 AM) Room - Something went wrong when connecting to the database.
+(3/12/2020 11:39:36 AM) Room - Something went wrong when connecting to the database.
+(3/12/2020 11:49:44 AM) Room - Something went wrong when connecting to the database.
+(3/12/2020 12:05:47 PM) [Index was outside the bounds of the array.] Student - Something went wrong when connecting to the database.
+(3/12/2020 12:07:11 PM) [Invalid column name 'dentID'.] Student - Something went wrong when connecting to the database.
+(3/12/2020 2:00:44 PM) [Invalid column name 'techerID'.] Teacher - Something went wrong when connecting to the database.
+(3/12/2020 2:45:49 PM) [Incorrect syntax near the keyword 'FROM'.] Room - Something went wrong when connecting to the database.
