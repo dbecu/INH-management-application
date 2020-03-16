@@ -20,3 +20,4 @@
 (3/12/2020 12:07:11 PM) [Invalid column name 'dentID'.] Student - Something went wrong when connecting to the database.
 (3/12/2020 2:00:44 PM) [Invalid column name 'techerID'.] Teacher - Something went wrong when connecting to the database.
 (3/12/2020 2:45:49 PM) [Incorrect syntax near the keyword 'FROM'.] Room - Something went wrong when connecting to the database.
+(3/12/2020 7:31:30 PM) [Incorrect syntax near the keyword 'FROM'.] Room - Something went wrong when connecting to the database.
