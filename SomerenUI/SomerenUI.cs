@@ -10,7 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace SomerenUI
 {
     public partial class SomerenUI : Form
@@ -36,6 +35,7 @@ namespace SomerenUI
                     pnl_Students.Hide();
                     pnl_Rooms.Hide();
                     pnl_Lecturers.Hide();
+                    pnl_RevenueReport.Hide();
 
                     // show dashboard
                     pnl_Dashboard.Show();
@@ -50,6 +50,7 @@ namespace SomerenUI
                     img_Dashboard.Hide();
                     pnl_Lecturers.Hide();
                     pnl_Rooms.Hide();
+                    pnl_RevenueReport.Hide();
 
                     // show students
                     pnl_Students.Show();
@@ -100,9 +101,9 @@ namespace SomerenUI
                     // hide all other panels
                     pnl_Dashboard.Hide();
                     img_Dashboard.Hide();
-
                     pnl_Students.Hide();
                     pnl_Lecturers.Hide();
+                    pnl_RevenueReport.Hide();
 
                     // show rooms
                     pnl_Rooms.Show();
@@ -153,6 +154,7 @@ namespace SomerenUI
                     img_Dashboard.Hide();
                     pnl_Students.Hide();
                     pnl_Rooms.Hide();
+                    pnl_RevenueReport.Hide();
 
                     //show lecturers
                     pnl_Lecturers.Show();
@@ -166,24 +168,17 @@ namespace SomerenUI
                     ListViewLecturers.Items.Clear();
 
                     ColumnHeader teacherID = new ColumnHeader();
-                    {
-                        teacherID.Text = "TeacherID";
-                    }
-
-                    ColumnHeader firstname = new ColumnHeader();
-                    {
-                        firstname.Text = "First Name";
-                    }
-
+                    teacherID.Text = "TeacherID";
+                    
+                    ColumnHeader firstname = new ColumnHeader();    
+                    firstname.Text = "First Name";
+                    
                     ColumnHeader lastname = new ColumnHeader();
-                    {
-                        lastname.Text = "Last Name";
-                    }
+                    lastname.Text = "Last Name";
 
                     ColumnHeader supervisor = new ColumnHeader();
-                    {
-                        supervisor.Text = "Supervisor";
-                    }
+                    supervisor.Text = "Supervisor";
+                    
 
                     ListViewLecturers.Columns.AddRange(new ColumnHeader[] { teacherID, firstname, lastname, supervisor });
                     ListViewLecturers.Columns[0].Width = 100;
@@ -203,6 +198,24 @@ namespace SomerenUI
 
                     ListViewLecturers.Font = new Font("Arial", 10, FontStyle.Regular);
 
+                }
+                else if (panelName == "Revenue Report")
+                {
+                    // hide all other panels
+                    pnl_Dashboard.Hide();
+                    img_Dashboard.Hide();
+                    pnl_Students.Hide();
+                    pnl_Rooms.Hide();
+                    pnl_Lecturers.Hide();
+
+                    //show revenue report
+                    pnl_RevenueReport.Show();
+
+                    DateTime startDate = monthCalendar_StartDate.SelectionRange.Start;
+                    DateTime endDate = monthCalendar_EndDate.SelectionRange.Start;
+
+                    //show the list view and all responses
+                    show_RevenueReport(startDate, endDate);
                 }
             }
             catch (Exception e)
@@ -228,11 +241,6 @@ namespace SomerenUI
             showPanel("Dashboard");
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void img_Dashboard_Click(object sender, EventArgs e)
         {
             MessageBox.Show("What happens in Someren, stays in Someren!");
@@ -248,19 +256,96 @@ namespace SomerenUI
             showPanel("Rooms");
         }
 
+        private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Lecturers");
+        }
+
+        private void revenueReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Revenue Report");
+        }
+
+        private void btn_RevenueReport_Click(object sender, EventArgs e)
+        {
+            DateTime startDate = monthCalendar_StartDate.SelectionRange.Start;
+            DateTime endDate = monthCalendar_EndDate.SelectionRange.Start;
+
+            //Checks that the start date is before the end date and if the start & enddate are before tomorrow
+            if (startDate > endDate)
+            {
+                lbl_Message.Text = "You inserted an end date before the start date! Please try again.";
+            }
+            else if (startDate > DateTime.Now || endDate > DateTime.Now)
+            {
+                lbl_Message.Text = "You inserted the start date and/or the end date in the future! Please try again.";
+            }
+            else
+            {
+                lbl_Message.Text = "";
+
+                show_RevenueReport(startDate, endDate);
+            }
+
+        }
+
+        //Method to avoid dublication
+        //Shows the ListView for the Revenue Report
+        public void show_RevenueReport(DateTime startDate, DateTime endDate)
+        {
+            SomerenLogic.Order_Service orderService = new SomerenLogic.Order_Service();
+            orderService.GetRevenueReport(
+                startDate, endDate,
+                out int amount, out decimal turnover, out int amountCustomers);
+
+            lbl_ListViewRevenueReport.Text = "Revenue Report of: " + startDate.ToString("dd-MM-yyyy") + " to " + endDate.ToString("dd-MM-yyyy");
+
+            // clear the listview before filling it again
+            listViewRevenueReport.Clear();
+            listViewRevenueReport.Items.Clear();
+
+            ColumnHeader rr_amount = new ColumnHeader();
+            rr_amount.Text = "Amount of Drinks";
+
+            ColumnHeader rr_turnover = new ColumnHeader();
+            rr_turnover.Text = "Turnover";
+
+            ColumnHeader rr_customers = new ColumnHeader();
+            rr_customers.Text = "Amount of Customers";
+
+            listViewRevenueReport.Columns.AddRange(new ColumnHeader[] { rr_amount, rr_turnover, rr_customers });
+            listViewRevenueReport.Columns[0].Width = 120;
+            listViewRevenueReport.Columns[1].Width = 70;
+            listViewRevenueReport.Columns[2].Width = 140;
+
+            //Adds the one record of data to the listview
+            ListViewItem lvi = new ListViewItem(amount.ToString());
+            lvi.SubItems.Add(turnover.ToString("€0.00"));
+            lvi.SubItems.Add(amountCustomers.ToString());
+            listViewRevenueReport.Items.Add(lvi);
+
+            listViewRevenueReport.Font = new Font("Arial", 10, FontStyle.Regular);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
         private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
-
         private void label1_Click_2(object sender, EventArgs e)
         {
 
         }
-
-        private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            showPanel("Lecturers");
+
+        }
+        private void lbl_Message_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -39,6 +39,7 @@
             this.lecturersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.revenueReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_Dashboard = new System.Windows.Forms.Panel();
             this.lbl_Dashboard = new System.Windows.Forms.Label();
             this.pnl_Rooms = new System.Windows.Forms.Panel();
@@ -62,6 +63,17 @@
             this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lbl_Lecturers = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pnl_RevenueReport = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lbl_Message = new System.Windows.Forms.Label();
+            this.btn_RevenueReport = new System.Windows.Forms.Button();
+            this.lbl_ListViewRevenueReport = new System.Windows.Forms.Label();
+            this.lbl_EndDate = new System.Windows.Forms.Label();
+            this.lbl_StartDate = new System.Windows.Forms.Label();
+            this.monthCalendar_EndDate = new System.Windows.Forms.MonthCalendar();
+            this.monthCalendar_StartDate = new System.Windows.Forms.MonthCalendar();
+            this.listViewRevenueReport = new System.Windows.Forms.ListView();
+            this.lbl_RevenueReport = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img_Dashboard)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.pnl_Dashboard.SuspendLayout();
@@ -71,6 +83,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_Lecturers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnl_RevenueReport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // img_Dashboard
@@ -91,11 +105,12 @@
             this.studentsToolStripMenuItem,
             this.lecturersToolStripMenuItem,
             this.activitiesToolStripMenuItem,
-            this.roomsToolStripMenuItem});
+            this.roomsToolStripMenuItem,
+            this.revenueReportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(962, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(962, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -109,7 +124,7 @@
             this.dashboardToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.dashboardToolStripMenuItem.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(149, 36);
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(120, 29);
             this.dashboardToolStripMenuItem.Text = "Application";
             this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
@@ -117,56 +132,65 @@
             // 
             this.dashboardToolStripMenuItem1.BackColor = System.Drawing.Color.White;
             this.dashboardToolStripMenuItem1.Name = "dashboardToolStripMenuItem1";
-            this.dashboardToolStripMenuItem1.Size = new System.Drawing.Size(224, 36);
+            this.dashboardToolStripMenuItem1.Size = new System.Drawing.Size(176, 30);
             this.dashboardToolStripMenuItem1.Text = "Dashboard";
             this.dashboardToolStripMenuItem1.Click += new System.EventHandler(this.dashboardToolStripMenuItem1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(173, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(176, 30);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // studentsToolStripMenuItem
             // 
             this.studentsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(122, 36);
             this.studentsToolStripMenuItem.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
             this.studentsToolStripMenuItem.Text = "Students";
             this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             // 
             // lecturersToolStripMenuItem
             // 
             this.lecturersToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.lecturersToolStripMenuItem.Name = "lecturersToolStripMenuItem";
-            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(125, 36);
             this.lecturersToolStripMenuItem.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lecturersToolStripMenuItem.Name = "lecturersToolStripMenuItem";
+            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(101, 29);
             this.lecturersToolStripMenuItem.Text = "Lecturers";
             this.lecturersToolStripMenuItem.Click += new System.EventHandler(this.lecturersToolStripMenuItem_Click);
             // 
             // activitiesToolStripMenuItem
             // 
             this.activitiesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
-            this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(124, 36);
             this.activitiesToolStripMenuItem.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
+            this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(99, 29);
             this.activitiesToolStripMenuItem.Text = "Activities";
             // 
             // roomsToolStripMenuItem
             // 
             this.roomsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.roomsToolStripMenuItem.Name = "roomsToolStripMenuItem";
-            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(101, 36);
             this.roomsToolStripMenuItem.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.roomsToolStripMenuItem.Name = "roomsToolStripMenuItem";
+            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
             this.roomsToolStripMenuItem.Text = "Rooms";
             this.roomsToolStripMenuItem.Click += new System.EventHandler(this.roomsToolStripMenuItem_Click);
+            // 
+            // revenueReportToolStripMenuItem
+            // 
+            this.revenueReportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.revenueReportToolStripMenuItem.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.revenueReportToolStripMenuItem.Name = "revenueReportToolStripMenuItem";
+            this.revenueReportToolStripMenuItem.Size = new System.Drawing.Size(155, 29);
+            this.revenueReportToolStripMenuItem.Text = "Revenue Report";
+            this.revenueReportToolStripMenuItem.Click += new System.EventHandler(this.revenueReportToolStripMenuItem_Click);
             // 
             // pnl_Dashboard
             // 
@@ -183,7 +207,7 @@
             this.lbl_Dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lbl_Dashboard.Location = new System.Drawing.Point(13, 13);
             this.lbl_Dashboard.Name = "lbl_Dashboard";
-            this.lbl_Dashboard.Size = new System.Drawing.Size(256, 18);
+            this.lbl_Dashboard.Size = new System.Drawing.Size(212, 15);
             this.lbl_Dashboard.TabIndex = 1;
             this.lbl_Dashboard.Text = "Welcome to the Someren Application!";
             this.lbl_Dashboard.Click += new System.EventHandler(this.label1_Click);
@@ -233,7 +257,7 @@
             this.lbl_Rooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Rooms.Location = new System.Drawing.Point(18, 5);
             this.lbl_Rooms.Name = "lbl_Rooms";
-            this.lbl_Rooms.Size = new System.Drawing.Size(148, 46);
+            this.lbl_Rooms.Size = new System.Drawing.Size(118, 37);
             this.lbl_Rooms.TabIndex = 6;
             this.lbl_Rooms.Text = "Rooms";
             this.lbl_Rooms.Click += new System.EventHandler(this.label1_Click_2);
@@ -309,7 +333,7 @@
             this.lbl_Students.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Students.Location = new System.Drawing.Point(10, 5);
             this.lbl_Students.Name = "lbl_Students";
-            this.lbl_Students.Size = new System.Drawing.Size(177, 46);
+            this.lbl_Students.Size = new System.Drawing.Size(143, 37);
             this.lbl_Students.TabIndex = 3;
             this.lbl_Students.Text = "Students";
             // 
@@ -352,7 +376,7 @@
             this.lbl_Lecturers.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Lecturers.Location = new System.Drawing.Point(10, 5);
             this.lbl_Lecturers.Name = "lbl_Lecturers";
-            this.lbl_Lecturers.Size = new System.Drawing.Size(186, 46);
+            this.lbl_Lecturers.Size = new System.Drawing.Size(150, 37);
             this.lbl_Lecturers.TabIndex = 6;
             this.lbl_Lecturers.Text = "Lecturers";
             // 
@@ -366,14 +390,144 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
+            // pnl_RevenueReport
+            // 
+            this.pnl_RevenueReport.Controls.Add(this.pictureBox4);
+            this.pnl_RevenueReport.Controls.Add(this.lbl_Message);
+            this.pnl_RevenueReport.Controls.Add(this.btn_RevenueReport);
+            this.pnl_RevenueReport.Controls.Add(this.lbl_ListViewRevenueReport);
+            this.pnl_RevenueReport.Controls.Add(this.lbl_EndDate);
+            this.pnl_RevenueReport.Controls.Add(this.lbl_StartDate);
+            this.pnl_RevenueReport.Controls.Add(this.monthCalendar_EndDate);
+            this.pnl_RevenueReport.Controls.Add(this.monthCalendar_StartDate);
+            this.pnl_RevenueReport.Controls.Add(this.listViewRevenueReport);
+            this.pnl_RevenueReport.Controls.Add(this.lbl_RevenueReport);
+            this.pnl_RevenueReport.Location = new System.Drawing.Point(5, 50);
+            this.pnl_RevenueReport.Name = "pnl_RevenueReport";
+            this.pnl_RevenueReport.Size = new System.Drawing.Size(1000, 420);
+            this.pnl_RevenueReport.TabIndex = 10;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::SomerenUI.Properties.Resources.someren;
+            this.pictureBox4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.InitialImage")));
+            this.pictureBox4.Location = new System.Drawing.Point(805, 30);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(130, 120);
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // lbl_Message
+            // 
+            this.lbl_Message.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Message.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Message.Location = new System.Drawing.Point(640, 183);
+            this.lbl_Message.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Message.Name = "lbl_Message";
+            this.lbl_Message.Size = new System.Drawing.Size(295, 55);
+            this.lbl_Message.TabIndex = 8;
+            // 
+            // btn_RevenueReport
+            // 
+            this.btn_RevenueReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btn_RevenueReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_RevenueReport.Location = new System.Drawing.Point(643, 76);
+            this.btn_RevenueReport.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_RevenueReport.Name = "btn_RevenueReport";
+            this.btn_RevenueReport.Size = new System.Drawing.Size(93, 74);
+            this.btn_RevenueReport.TabIndex = 7;
+            this.btn_RevenueReport.Text = "Generate Revenue Report";
+            this.btn_RevenueReport.UseVisualStyleBackColor = true;
+            this.btn_RevenueReport.Click += new System.EventHandler(this.btn_RevenueReport_Click);
+            // 
+            // lbl_ListViewRevenueReport
+            // 
+            this.lbl_ListViewRevenueReport.AutoSize = true;
+            this.lbl_ListViewRevenueReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ListViewRevenueReport.Location = new System.Drawing.Point(23, 264);
+            this.lbl_ListViewRevenueReport.Name = "lbl_ListViewRevenueReport";
+            this.lbl_ListViewRevenueReport.Size = new System.Drawing.Size(126, 20);
+            this.lbl_ListViewRevenueReport.TabIndex = 6;
+            this.lbl_ListViewRevenueReport.Text = "Revenue Report";
+            // 
+            // lbl_EndDate
+            // 
+            this.lbl_EndDate.AutoSize = true;
+            this.lbl_EndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EndDate.Location = new System.Drawing.Point(361, 56);
+            this.lbl_EndDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_EndDate.Name = "lbl_EndDate";
+            this.lbl_EndDate.Size = new System.Drawing.Size(77, 20);
+            this.lbl_EndDate.TabIndex = 5;
+            this.lbl_EndDate.Text = "End Date";
+            // 
+            // lbl_StartDate
+            // 
+            this.lbl_StartDate.AutoSize = true;
+            this.lbl_StartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StartDate.Location = new System.Drawing.Point(23, 56);
+            this.lbl_StartDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_StartDate.Name = "lbl_StartDate";
+            this.lbl_StartDate.Size = new System.Drawing.Size(83, 20);
+            this.lbl_StartDate.TabIndex = 4;
+            this.lbl_StartDate.Text = "Start Date";
+            // 
+            // monthCalendar_EndDate
+            // 
+            this.monthCalendar_EndDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.monthCalendar_EndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.monthCalendar_EndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.monthCalendar_EndDate.Location = new System.Drawing.Point(364, 76);
+            this.monthCalendar_EndDate.Margin = new System.Windows.Forms.Padding(7);
+            this.monthCalendar_EndDate.MaxSelectionCount = 1;
+            this.monthCalendar_EndDate.Name = "monthCalendar_EndDate";
+            this.monthCalendar_EndDate.TabIndex = 3;
+            this.monthCalendar_EndDate.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.monthCalendar_EndDate.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            // 
+            // monthCalendar_StartDate
+            // 
+            this.monthCalendar_StartDate.BackColor = System.Drawing.Color.White;
+            this.monthCalendar_StartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.monthCalendar_StartDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.monthCalendar_StartDate.Location = new System.Drawing.Point(26, 76);
+            this.monthCalendar_StartDate.Margin = new System.Windows.Forms.Padding(7);
+            this.monthCalendar_StartDate.MaxSelectionCount = 1;
+            this.monthCalendar_StartDate.Name = "monthCalendar_StartDate";
+            this.monthCalendar_StartDate.TabIndex = 2;
+            this.monthCalendar_StartDate.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.monthCalendar_StartDate.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            // 
+            // listViewRevenueReport
+            // 
+            this.listViewRevenueReport.HideSelection = false;
+            this.listViewRevenueReport.Location = new System.Drawing.Point(26, 286);
+            this.listViewRevenueReport.Margin = new System.Windows.Forms.Padding(2);
+            this.listViewRevenueReport.Name = "listViewRevenueReport";
+            this.listViewRevenueReport.Size = new System.Drawing.Size(565, 132);
+            this.listViewRevenueReport.TabIndex = 1;
+            this.listViewRevenueReport.UseCompatibleStateImageBehavior = false;
+            this.listViewRevenueReport.View = System.Windows.Forms.View.Details;
+            // 
+            // lbl_RevenueReport
+            // 
+            this.lbl_RevenueReport.AutoSize = true;
+            this.lbl_RevenueReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_RevenueReport.Location = new System.Drawing.Point(18, 5);
+            this.lbl_RevenueReport.Name = "lbl_RevenueReport";
+            this.lbl_RevenueReport.Size = new System.Drawing.Size(245, 37);
+            this.lbl_RevenueReport.TabIndex = 0;
+            this.lbl_RevenueReport.Text = "Revenue Report";
+            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(962, 512);
-            this.Controls.Add(this.pnl_Dashboard);
+            this.Controls.Add(this.pnl_RevenueReport);
             this.Controls.Add(this.pnl_Students);
+            this.Controls.Add(this.pnl_Dashboard);
             this.Controls.Add(this.pnl_Lecturers);
             this.Controls.Add(this.pnl_Rooms);
             this.Controls.Add(this.menuStrip1);
@@ -397,6 +551,9 @@
             this.pnl_Lecturers.ResumeLayout(false);
             this.pnl_Lecturers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnl_RevenueReport.ResumeLayout(false);
+            this.pnl_RevenueReport.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,6 +574,7 @@
         private System.Windows.Forms.ToolStripMenuItem lecturersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem activitiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem roomsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem revenueReportToolStripMenuItem;
 
         private System.Windows.Forms.Panel pnl_Students;
         private System.Windows.Forms.Label lbl_Students;
@@ -442,6 +600,16 @@
         private System.Windows.Forms.ColumnHeader name;
         private System.Windows.Forms.PictureBox pictureBox3;
 
+        private System.Windows.Forms.Panel pnl_RevenueReport;
+        private System.Windows.Forms.Button btn_RevenueReport;
+        private System.Windows.Forms.Label lbl_ListViewRevenueReport;
+        private System.Windows.Forms.Label lbl_EndDate;
+        private System.Windows.Forms.Label lbl_StartDate;
+        private System.Windows.Forms.MonthCalendar monthCalendar_EndDate;
+        private System.Windows.Forms.MonthCalendar monthCalendar_StartDate;
+        private System.Windows.Forms.ListView listViewRevenueReport;
+        private System.Windows.Forms.Label lbl_RevenueReport;
+        private System.Windows.Forms.Label lbl_Message;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
-

@@ -21,3 +21,38 @@
 (3/12/2020 2:00:44 PM) [Invalid column name 'techerID'.] Teacher - Something went wrong when connecting to the database.
 (3/12/2020 2:45:49 PM) [Incorrect syntax near the keyword 'FROM'.] Room - Something went wrong when connecting to the database.
 (3/12/2020 7:31:30 PM) [Incorrect syntax near the keyword 'FROM'.] Room - Something went wrong when connecting to the database.
+(3/16/2020 7:02:42 PM) [Incorrect syntax near 'dateOrders'.] Order - Something went wrong when connecting to the database.
+(3/16/2020 7:04:49 PM) [Incorrect syntax near 'dateOrders'.] Order - Something went wrong when connecting to the database.
+(3/16/2020 7:06:55 PM) [Incorrect syntax near 'dateOrders'.] Order - Something went wrong when connecting to the database.
+(3/16/2020 7:11:47 PM) [Incorrect syntax near 'dateOrders'.] Order - Something went wrong when connecting to the database.
+(3/16/2020 7:12:25 PM) [Conversion failed when converting date and/or time from character string.] Order - Something went wrong when connecting to the database.
+(3/16/2020 7:18:01 PM) [Conversion failed when converting date and/or time from character string.] Order - Something went wrong when connecting to the database.
+(3/16/2020 7:20:22 PM) [Conversion failed when converting date and/or time from character string.] Order - Something went wrong when connecting to the database.
+(3/16/2020 7:20:35 PM) [Conversion failed when converting date and/or time from character string.] Order - Something went wrong when connecting to the database.
+(3/16/2020 7:23:28 PM) [Conversion failed when converting date and/or time from character string.] Order - Something went wrong when connecting to the database.
+(3/16/2020 7:24:09 PM) [Conversion failed when converting date and/or time from character string.] Order - Something went wrong when connecting to the database.
+(3/16/2020 7:25:26 PM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/16/2020 7:59:59 PM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/16/2020 8:01:45 PM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/16/2020 8:22:15 PM) [Conversion failed when converting date and/or time from character string.] Order - Something went wrong when connecting to the database.
+(3/17/2020 8:33:24 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 8:33:56 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 8:39:49 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 8:43:52 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 8:46:53 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 9:23:34 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 9:30:03 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 9:30:07 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 9:30:36 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 9:30:49 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 9:46:29 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 10:20:17 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 10:21:29 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 10:21:46 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 10:22:19 AM) [Specified cast is not valid.] Order - Something went wrong when connecting to the database.
+(3/17/2020 10:24:40 AM) [[Specified cast is not valid.] - Cannot cast NULL!] Order - Something went wrong when connecting to the database.
+(3/17/2020 10:26:32 AM) [[Specified cast is not valid.] - Cannot cast NULL!] Order - Something went wrong when connecting to the database.
+(3/17/2020 10:50:46 AM) [Conversion failed when converting date and/or time from character string.] Order - Something went wrong when connecting to the database.
+(3/17/2020 10:50:53 AM) [Conversion failed when converting date and/or time from character string.] Order - Something went wrong when connecting to the database.
+(3/17/2020 10:51:54 AM) [Conversion failed when converting date and/or time from character string.] Order - Something went wrong when connecting to the database.
+(3/17/2020 10:51:58 AM) [Conversion failed when converting date and/or time from character string.] Order - Something went wrong when connecting to the database.
