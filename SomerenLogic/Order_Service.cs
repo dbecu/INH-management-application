@@ -9,6 +9,7 @@ namespace SomerenLogic
     {
         Order_DAO order_db = new Order_DAO();
 
+        //returns amount turnover and amount of customers from database
         public void GetRevenueReport(DateTime startDate, DateTime endDate, out int amount, out decimal turnover, out int amountCustomers)
         {
             //tries to get list of rooms from database unless an exception occurs

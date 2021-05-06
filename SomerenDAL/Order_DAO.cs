@@ -13,7 +13,6 @@ namespace SomerenDAL
         public void Db_Get_TurnOver(DateTime startDate, DateTime endDate, out int amount, out decimal turnover, out int amountCustomers)
         {
             conn.Open();
-
             //changing dates into string for SQL
             string str_startDate = startDate.ToString("yyyy-MM-dd");
             string str_endDate = endDate.ToString("yyyy-MM-dd");

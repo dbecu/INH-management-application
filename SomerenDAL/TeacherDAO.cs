@@ -13,15 +13,36 @@ namespace SomerenDAL
     public class Teacher_DAO : Base
     {
         //gets all the teachers from database and returns a list of teachers
-        public List<Teacher> Db_Get_All_Teachers()  
+        public List<Teacher> Db_Get_Non_supervisors()
         {
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT teacherID, name,lastname FROM teachers", conn);
+            SqlCommand cmd = new SqlCommand("SELECT teacherID, [name], lastname FROM teachers WHERE teacherID NOT IN (SELECT teacherID FROM supervisors)", conn);
             SqlDataReader reader = cmd.ExecuteReader();
             List<Teacher> teachers = new List<Teacher>(); //list of teachers
 
             //reads a teacher object and stores it in the list of teachers
-            while (reader.Read())  
+            while (reader.Read())
+            {
+                Teacher teacher = ReadTeacher(reader);
+                teachers.Add(teacher);
+            }
+
+            reader.Close();
+            conn.Close();
+
+            return teachers;
+        }
+
+        //gets all the teachers from database and returns a list of teachers
+        public List<Teacher> Db_Get_All_Teachers()
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT teacherID, name,lastname FROM teachers WHERE teacherID > 0", conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<Teacher> teachers = new List<Teacher>(); //list of teachers
+
+            //reads a teacher object and stores it in the list of teachers
+            while (reader.Read())
             {
                 Teacher teacher = ReadTeacher(reader);
                 teachers.Add(teacher);
@@ -45,13 +66,27 @@ namespace SomerenDAL
             foreach (Teacher teacher in teachers)
             {
                 if (supervisors.Contains(teacher.Number))
-                    teacher.Supervisor = true;
-                
+                    teacher.IsSupervisor = true;
+
             }
 
             conn.Close();
 
             return teachers;
+        }
+
+        //adds a teacher to the supervisors-table in database
+        public void Db_Insert_Supervisor(int teacherID)
+        {
+            SqlCommand cmd = new SqlCommand("INSERT INTO supervisors(teacherID) VALUES(@teacherID)", conn);
+
+            cmd.Parameters.AddWithValue("@teacherID", teacherID);
+
+            conn.Open();
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
 
         //reads a teacher from the database and converts it into a teacher object

@@ -14,7 +14,7 @@ namespace SomerenDAL
         public Base()       
         {
             string connString = ConfigurationManager
-                .ConnectionStrings["pdb1920it10"]       //pdb1920it10 = database name
+                .ConnectionStrings["database"]       
                 .ConnectionString;
             conn = new SqlConnection(connString);
         }

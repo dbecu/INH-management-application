@@ -12,7 +12,7 @@ namespace SomerenModel
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Number { get; set; } // LecturerNumber, e.g. 47198
-        public bool Supervisor { get; set; } 
+        public virtual bool IsSupervisor { get; set; } 
         public string FullName  // full name 
         {
             get
@@ -27,7 +27,7 @@ namespace SomerenModel
         {
             get
             {
-                if (Supervisor)
+                if (IsSupervisor)
                     return "Yes";
                 else
                     return "No";
@@ -42,6 +42,7 @@ namespace SomerenModel
             Number = number;
         }
 
+        //Overwritten toString method
         public override string ToString()
         {
             return $"({Number})" + FullName;

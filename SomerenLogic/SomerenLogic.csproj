@@ -42,11 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity_Service.cs" />
+    <Compile Include="Drink_Service.cs" />
     <Compile Include="Order_Service.cs" />
     <Compile Include="Room_Service.cs" />
     <Compile Include="Student_Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Supervisor_Service.cs" />
     <Compile Include="Teacher_Service.cs" />
+    <Compile Include="Timetable_Service.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SomerenDAL\SomerenDAL.csproj">
